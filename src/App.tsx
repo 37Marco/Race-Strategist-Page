@@ -1,3 +1,63 @@
+function ProductPreview() {
+  return (
+    <figure className="product-preview">
+      <div className="preview-header">
+        <div>
+          <small>Pit outcome</small>
+          <strong>Circuit des 24 Heures du Mans</strong>
+        </div>
+        <span>Live</span>
+      </div>
+
+      <div className="preview-summary">
+        <small>Current projected outcome</small>
+        <strong>Pit now</strong>
+        <span>Projected P7 with immediate traffic</span>
+      </div>
+
+      <div className="preview-panel">
+        <div className="preview-panel-heading">
+          <div>
+            <small>Scenario</small>
+            <strong>Pit now</strong>
+          </div>
+          <span>Medium traffic</span>
+        </div>
+
+        <dl className="preview-metrics">
+          <div>
+            <dt>Projected rejoin</dt>
+            <dd>P7</dd>
+          </div>
+          <div>
+            <dt>Total pit loss</dt>
+            <dd>30.0 s</dd>
+          </div>
+          <div>
+            <dt>Service</dt>
+            <dd>4.9 s</dd>
+          </div>
+        </dl>
+
+        <div className="preview-driver">
+          <span>Ahead</span>
+          <strong>#21 Rodriguez</strong>
+          <span>−8.2 s</span>
+          <span>−0.3 s/lap</span>
+        </div>
+        <div className="preview-driver">
+          <span>Behind</span>
+          <strong>#19 Dubreucq</strong>
+          <span>+3.0 s</span>
+          <span>+0.4 s/lap</span>
+        </div>
+      </div>
+
+      <figcaption>Product preview · footage coming soon</figcaption>
+    </figure>
+  );
+}
+
 function App() {
   return (
     <>
@@ -15,9 +75,27 @@ function App() {
 
       <main id="top">
         <section className="page-section hero-section">
-          <div className="shell">
-            <p>Product website</p>
-            <h1>Race Strategist</h1>
+          <div className="shell hero-layout">
+            <div className="hero-copy">
+              <p>Local. Live. Explainable.</p>
+              <h1>See the pit exit before you commit.</h1>
+              <div className="hero-description">
+                Race Strategist turns live iRacing telemetry and selected pit
+                services into a clear, real-time pit outcome.
+              </div>
+              <div className="hero-actions">
+                <button type="button" disabled>
+                  Download coming soon
+                </button>
+                <a href="#product">Explore the product</a>
+              </div>
+              <ul className="hero-facts" aria-label="Product facts">
+                <li>Windows</li>
+                <li>Local processing</li>
+                <li>Built for iRacing</li>
+              </ul>
+            </div>
+            <ProductPreview />
           </div>
         </section>
 
