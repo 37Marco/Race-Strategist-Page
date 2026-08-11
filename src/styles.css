@@ -1,0 +1,34 @@
+:root {
+  color: #1f2933;
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  width: min(720px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: clamp(42px, 8vw, 72px);
+  line-height: 1;
+}
+
+p {
+  color: #64717d;
+  font-size: 18px;
+}
