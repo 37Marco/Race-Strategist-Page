@@ -16,10 +16,42 @@ body {
   margin: 0;
 }
 
-main {
-  width: min(720px, calc(100% - 48px));
+.shell {
+  width: min(1120px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 120px 0;
+}
+
+.site-header {
+  border-bottom: 1px solid #e4e8eb;
+}
+
+.header-content {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.header-content a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+.page-section {
+  min-height: 420px;
+  padding: 96px 0;
+  border-bottom: 1px solid #e4e8eb;
+}
+
+.hero-section {
+  min-height: 620px;
 }
 
 h1 {
@@ -28,7 +60,31 @@ h1 {
   line-height: 1;
 }
 
+h2 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 52px);
+}
+
 p {
   color: #64717d;
   font-size: 18px;
+}
+
+footer .shell {
+  padding: 48px 0;
+}
+
+@media (max-width: 640px) {
+  .shell {
+    width: min(100% - 28px, 1120px);
+  }
+
+  nav {
+    display: none;
+  }
+
+  .page-section {
+    min-height: 340px;
+    padding: 72px 0;
+  }
 }
