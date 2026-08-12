@@ -4,6 +4,8 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   background: #ffffff;
+  --brand-accent: #0e9f7a;
+  --brand-accent-soft: #e8f8f3;
 }
 
 * {
@@ -39,6 +41,43 @@ body {
   text-decoration: none;
 }
 
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--brand-accent) 45%, transparent);
+  border-radius: 10px;
+  color: var(--brand-accent);
+  background: var(--brand-accent-soft);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.brand-name {
+  display: grid;
+  line-height: 1.05;
+}
+
+.brand-name small {
+  color: #64717d;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+}
+
 nav {
   display: flex;
   gap: 24px;
@@ -68,6 +107,7 @@ h1 {
 }
 
 .hero-copy > p {
+  color: var(--brand-accent);
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -217,7 +257,9 @@ p {
 }
 
 footer .shell {
+  display: flex;
   padding: 48px 0;
+  align-items: center;
 }
 
 @media (max-width: 640px) {

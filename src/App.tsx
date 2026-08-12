@@ -1,3 +1,17 @@
+function Brand() {
+  return (
+    <a className="brand" href="#top" aria-label="Race Strategist home">
+      <span className="brand-mark" aria-hidden="true">
+        RS
+      </span>
+      <span className="brand-name">
+        <small>Race</small>
+        Strategist
+      </span>
+    </a>
+  );
+}
+
 function ProductPreview() {
   return (
     <figure className="product-preview">
@@ -63,7 +77,7 @@ function App() {
     <>
       <header className="site-header">
         <div className="shell header-content">
-          <a href="#top">Race Strategist</a>
+          <Brand />
           <nav aria-label="Primary navigation">
             <a href="#product">Product</a>
             <a href="#process">Process</a>
@@ -125,7 +139,9 @@ function App() {
       </main>
 
       <footer>
-        <div className="shell">Race Strategist</div>
+        <div className="shell">
+          <Brand />
+        </div>
       </footer>
     </>
   );
