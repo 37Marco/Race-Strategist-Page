@@ -97,6 +97,7 @@ function App() {
             <a href="#product">Product</a>
             <a href="#process">Process</a>
             <a href="#accuracy">Accuracy</a>
+            <a href="#future">Future</a>
             <a href="#about">About</a>
           </nav>
           <button
@@ -334,10 +335,56 @@ function App() {
           </div>
         </section>
 
-        <section className="page-section" id="about">
+        <section className="page-section" id="future">
           <div className="shell">
             <header className="section-heading">
               <span>04</span>
+              <div>
+                <p>Future implementations</p>
+                <h2>More insight. More simulations.</h2>
+              </div>
+            </header>
+
+            <div className="future-grid">
+              <article>
+                <span>01</span>
+                <p>Prediction</p>
+                <h3>Machine-learning forecasts</h3>
+                <ul>
+                  <li>Improved future race-state projections</li>
+                  <li>Learned post-stop pace behaviour</li>
+                </ul>
+              </article>
+              <article>
+                <span>02</span>
+                <p>Simulation support</p>
+                <h3>Le Mans Ultimate</h3>
+                <ul>
+                  <li>LMU telemetry integration</li>
+                  <li>The same focused pit-outcome workflow</li>
+                </ul>
+              </article>
+              <article>
+                <span>03</span>
+                <p>Strategy horizon</p>
+                <h3>Beyond pit now</h3>
+                <ul>
+                  <li>Later-lap pit timing comparisons</li>
+                  <li>Opponent pit-stop probability models</li>
+                </ul>
+              </article>
+            </div>
+
+            <p className="future-note">
+              Planned directions, not features of the current MVP.
+            </p>
+          </div>
+        </section>
+
+        <section className="page-section" id="about">
+          <div className="shell">
+            <header className="section-heading">
+              <span>05</span>
               <div>
                 <p>Behind the project</p>
                 <h2>Built from a real racing problem.</h2>

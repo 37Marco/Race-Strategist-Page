@@ -196,7 +196,7 @@ nav a:hover {
 }
 
 #process,
-#about {
+#future {
   background: var(--background-soft);
 }
 
@@ -582,6 +582,7 @@ h2 {
 .process-list h3,
 .accuracy-points h3,
 .local-first h3,
+.future-grid h3,
 .engineering-focus h3 {
   margin: 0;
   letter-spacing: -0.02em;
@@ -606,6 +607,63 @@ h2 {
   gap: 9px;
   margin-top: 11px;
   font-size: 13px;
+}
+
+.future-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.future-grid article {
+  min-height: 280px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+}
+
+.future-grid article > span,
+.future-grid article > p {
+  color: var(--brand-accent);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.future-grid article > p {
+  margin: 64px 0 10px;
+}
+
+.future-grid h3 {
+  font-size: 21px;
+}
+
+.future-grid ul {
+  margin: 20px 0 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  list-style: none;
+}
+
+.future-grid li + li {
+  margin-top: 8px;
+}
+
+.future-grid li::before {
+  margin-right: 8px;
+  color: var(--brand-accent);
+  content: "\2192";
+}
+
+.future-note {
+  margin: 28px 0 0;
+  color: var(--quiet);
+  font-size: 11px;
+  text-align: right;
 }
 
 .capability-grid li::before {
@@ -870,7 +928,8 @@ footer .shell {
   }
 
   .capability-grid,
-  .process-list {
+  .process-list,
+  .future-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -889,8 +948,17 @@ footer .shell {
     min-height: 66px;
   }
 
+  .brand {
+    grid-column: 1;
+  }
+
   nav {
     display: none;
+  }
+
+  .theme-toggle {
+    grid-column: 3;
+    justify-self: end;
   }
 
   .page-section {
@@ -940,7 +1008,8 @@ footer .shell {
   }
 
   .capability-grid,
-  .process-list {
+  .process-list,
+  .future-grid {
     grid-template-columns: 1fr;
   }
 
