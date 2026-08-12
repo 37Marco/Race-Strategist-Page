@@ -175,13 +175,125 @@ function App() {
 
         <section className="page-section" id="process">
           <div className="shell">
-            <h2>How it works</h2>
+            <header className="section-heading">
+              <span>02</span>
+              <div>
+                <p>How it works</p>
+                <h2>From telemetry to a usable answer.</h2>
+              </div>
+            </header>
+
+            <ol className="process-list">
+              <li>
+                <span>01</span>
+                <div>
+                  <h3>Read</h3>
+                  <p>
+                    Local iRacing SDK telemetry and the currently selected pit
+                    services.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <h3>Model</h3>
+                  <p>
+                    Estimated service time and calibrated non-service pit loss.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <h3>Project</h3>
+                  <p>
+                    Rejoin position, surrounding cars, gaps and immediate
+                    traffic.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>04</span>
+                <div>
+                  <h3>Explain</h3>
+                  <p>
+                    Data sources, confidence and material uncertainty in one
+                    overlay.
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            <div className="driver-control">
+              <strong>The driver stays in control.</strong>
+              <ul>
+                <li>No automatic pit commands</li>
+                <li>No fuel recommendation</li>
+                <li>No claim that opponents will stay out</li>
+              </ul>
+            </div>
           </div>
         </section>
 
         <section className="page-section" id="accuracy">
           <div className="shell">
-            <h2>Accuracy</h2>
+            <header className="section-heading">
+              <span>03</span>
+              <div>
+                <p>Accuracy by design</p>
+                <h2>Measured locally. Honest when uncertain.</h2>
+              </div>
+            </header>
+
+            <div className="accuracy-layout">
+              <div className="accuracy-points">
+                <article>
+                  <span>01</span>
+                  <div>
+                    <h3>Learns from valid stops</h3>
+                    <p>
+                      Uses the median of recent observations for the exact track
+                      and car combination.
+                    </p>
+                  </div>
+                </article>
+                <article>
+                  <span>02</span>
+                  <div>
+                    <h3>Rejects misleading data</h3>
+                    <p>
+                      Tow, telemetry gaps, penalties and incomplete traversals
+                      do not enter calibration.
+                    </p>
+                  </div>
+                </article>
+                <article>
+                  <span>03</span>
+                  <div>
+                    <h3>Never invents a value</h3>
+                    <p>
+                      Missing evidence stays unavailable and lowers confidence
+                      instead of becoming a hidden assumption.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <aside className="local-first">
+                <p>Local first</p>
+                <h3>Your race data stays on your PC.</h3>
+                <div>
+                  Race telemetry, calibration and predictions are processed on
+                  the same Windows PC that runs the app.
+                </div>
+                <ul>
+                  <li>No account</li>
+                  <li>No cloud telemetry</li>
+                  <li>No internet required during a race</li>
+                </ul>
+              </aside>
+            </div>
           </div>
         </section>
 
