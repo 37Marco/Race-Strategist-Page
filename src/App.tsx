@@ -348,20 +348,20 @@ function App() {
             <div className="future-grid">
               <article>
                 <span>01</span>
+                <p>Likely next step</p>
+                <h3>Le Mans Ultimate</h3>
+                <ul>
+                  <li>LMU telemetry integration</li>
+                  <li>The same focused pit-outcome workflow</li>
+                </ul>
+              </article>
+              <article>
+                <span>02</span>
                 <p>Prediction</p>
                 <h3>Machine-learning forecasts</h3>
                 <ul>
                   <li>Improved future race-state projections</li>
                   <li>Learned post-stop pace behaviour</li>
-                </ul>
-              </article>
-              <article>
-                <span>02</span>
-                <p>Simulation support</p>
-                <h3>Le Mans Ultimate</h3>
-                <ul>
-                  <li>LMU telemetry integration</li>
-                  <li>The same focused pit-outcome workflow</li>
                 </ul>
               </article>
               <article>
