@@ -113,9 +113,63 @@ function App() {
           </div>
         </section>
 
+        <aside className="mvp-status" aria-label="Product status">
+          <div className="shell">
+            <strong>MVP in development</strong>
+            <span>Focused on one question: what happens if I pit now?</span>
+          </div>
+        </aside>
+
         <section className="page-section" id="product">
           <div className="shell">
-            <h2>Product</h2>
+            <header className="section-heading">
+              <span>01</span>
+              <div>
+                <p>What it does</p>
+                <h2>One decision. The useful details.</h2>
+              </div>
+            </header>
+
+            <div className="capability-grid">
+              <article>
+                <span aria-hidden="true">P</span>
+                <h3>Projected rejoin</h3>
+                <ul>
+                  <li>Estimated position after pit exit</li>
+                  <li>Nearest car ahead and behind</li>
+                  <li>Signed gaps and recent pace delta</li>
+                </ul>
+              </article>
+
+              <article>
+                <span aria-hidden="true">Δ</span>
+                <h3>Explainable pit loss</h3>
+                <ul>
+                  <li>Selected fuel and tyres</li>
+                  <li>Service and pit-road time</li>
+                  <li>Track-and-car-specific observations</li>
+                </ul>
+              </article>
+
+              <article>
+                <span aria-hidden="true">!</span>
+                <h3>Traffic and confidence</h3>
+                <ul>
+                  <li>Immediate traffic risk</li>
+                  <li>Clear confidence level</li>
+                  <li>Warnings when inputs are missing</li>
+                </ul>
+              </article>
+            </div>
+
+            <div className="product-boundary">
+              <strong>A focused outcome simulator</strong>
+              <ul>
+                <li>No automatic pit decisions</li>
+                <li>No fuel recommendation</li>
+                <li>No full-race strategy</li>
+              </ul>
+            </div>
           </div>
         </section>
 
