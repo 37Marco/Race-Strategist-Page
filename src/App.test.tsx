@@ -21,7 +21,8 @@ describe("Race Strategist website", () => {
     expect(
       screen.getByText("Mandatory repair time unknown"),
     ).toBeInTheDocument();
-    expect(screen.getByText("Prediction unavailable")).toBeInTheDocument();
+    expect(screen.getByText(/Prediction unavailable/)).toBeInTheDocument();
+    expect(screen.queryByText(/footage coming soon/i)).not.toBeInTheDocument();
     expect(
       screen.getByRole("button", { name: "Download coming soon" }),
     ).toBeDisabled();

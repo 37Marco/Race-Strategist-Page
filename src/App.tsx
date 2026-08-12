@@ -16,9 +16,12 @@ function ProductPreview() {
   return (
     <figure className="product-preview">
       <div className="preview-header">
-        <div>
-          <small>Pit outcome</small>
-          <strong>Circuit des 24 Heures du Mans</strong>
+        <div className="preview-brand">
+          <span aria-hidden="true">RS</span>
+          <div>
+            <small>Race Strategist</small>
+            <strong>Circuit des 24 Heures du Mans</strong>
+          </div>
         </div>
         <span>Live</span>
       </div>
@@ -48,24 +51,25 @@ function ProductPreview() {
             <div>
               <dt>Estimated outlap loss</dt>
               <dd>2.8 s</dd>
+              <small>With tyre change</small>
             </div>
             <div>
               <dt>Pit-exit recovery</dt>
               <dd>1.1 s</dd>
+              <small>First 8 s after SDK pit exit</small>
             </div>
           </dl>
         </section>
 
         <section className="preview-panel">
           <div className="preview-panel-heading">
-            <small>Projected pit outcome</small>
-            <span>Medium traffic</span>
+            <span className="preview-risk-high">High traffic</span>
           </div>
 
           <dl className="preview-metrics">
             <div>
               <dt>Projected rejoin</dt>
-              <dd>P7</dd>
+              <dd>P10</dd>
             </div>
             <div>
               <dt>Total pit loss</dt>
@@ -77,17 +81,19 @@ function ProductPreview() {
             </div>
           </dl>
 
-          <div className="preview-driver">
-            <span>Ahead</span>
-            <strong>#21 Rodriguez</strong>
-            <span>−4.1 s</span>
-            <span className="pace-gain">−0.3 s/lap</span>
-          </div>
-          <div className="preview-driver">
-            <span>Behind</span>
-            <strong>#19 Dubreucq</strong>
-            <span>+2.3 s</span>
-            <span className="pace-loss">+0.4 s/lap</span>
+          <div className="preview-neighbors">
+            <div className="preview-driver">
+              <span>Ahead</span>
+              <strong>#17 Driver A</strong>
+              <span>−4.1 s</span>
+              <span className="pace-gain">−0.4 s/lap</span>
+            </div>
+            <div className="preview-driver">
+              <span>Behind</span>
+              <strong>#24 Driver B</strong>
+              <span>+2.3 s</span>
+              <span className="pace-loss">+0.1 s/lap</span>
+            </div>
           </div>
 
           <div className="preview-confidence">
@@ -96,21 +102,6 @@ function ProductPreview() {
           </div>
         </section>
       </div>
-
-      <aside
-        className="preview-uncertainty"
-        aria-label="Uncertain outcome example"
-      >
-        <div>
-          <strong>Mandatory repair time unknown</strong>
-          <span>
-            Provisional values are clearly marked and never presented as final.
-          </span>
-        </div>
-        <span>Low confidence</span>
-      </aside>
-
-      <figcaption>Product preview · footage coming soon</figcaption>
     </figure>
   );
 }
@@ -241,8 +232,11 @@ function App() {
                   <li>Uncertain outcomes are visibly marked</li>
                 </ul>
                 <div className="capability-status">
-                  <strong>Prediction unavailable</strong>
-                  <span>Required data is missing</span>
+                  <strong>Mandatory repair time unknown</strong>
+                  <span>
+                    Provisional values are marked in red. If required data is
+                    missing entirely, the overlay shows Prediction unavailable.
+                  </span>
                 </div>
               </article>
             </div>
