@@ -299,14 +299,85 @@ function App() {
 
         <section className="page-section" id="about">
           <div className="shell">
-            <h2>About the project</h2>
+            <header className="section-heading">
+              <span>04</span>
+              <div>
+                <p>Behind the project</p>
+                <h2>Built from a real racing problem.</h2>
+              </div>
+            </header>
+
+            <div className="about-layout">
+              <article className="project-story">
+                <p>
+                  Race Strategist started with a practical question during
+                  endurance racing: where will the car actually rejoin after a
+                  stop?
+                </p>
+                <p>
+                  The project turns raw live telemetry into a focused,
+                  explainable answer while keeping all race data on the local
+                  computer.
+                </p>
+                <a
+                  href="https://github.com/37Marco"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Built by Marco · View GitHub profile
+                </a>
+              </article>
+
+              <div className="engineering-focus">
+                <article>
+                  <span>01</span>
+                  <div>
+                    <h3>Telemetry engineering</h3>
+                    <p>
+                      Normalised live iRacing data, historical race state and
+                      reproducible JSONL playback.
+                    </p>
+                  </div>
+                </article>
+                <article>
+                  <span>02</span>
+                  <div>
+                    <h3>Deterministic modelling</h3>
+                    <p>
+                      Explainable service, pit-loss and rejoin calculations with
+                      explicit uncertainty.
+                    </p>
+                  </div>
+                </article>
+                <article>
+                  <span>03</span>
+                  <div>
+                    <h3>Local product delivery</h3>
+                    <p>
+                      A Python engine and a responsive React, TypeScript and
+                      Electron overlay for Windows.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <ul className="technology-list" aria-label="Technology stack">
+              <li>Python</li>
+              <li>iRacing SDK</li>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Electron</li>
+              <li>WebSocket</li>
+            </ul>
           </div>
         </section>
       </main>
 
       <footer>
-        <div className="shell">
+        <div className="shell footer-content">
           <Brand />
+          <p>Independent project. Not affiliated with iRacing.com.</p>
         </div>
       </footer>
     </>
