@@ -19,6 +19,10 @@ describe("Race Strategist website", () => {
     expect(screen.getByText("MVP in development")).toBeInTheDocument();
     expect(screen.getByText("No automatic pit decisions")).toBeInTheDocument();
     expect(
+      screen.getByText("Mandatory repair time unknown"),
+    ).toBeInTheDocument();
+    expect(screen.getByText("Prediction unavailable")).toBeInTheDocument();
+    expect(
       screen.getByRole("button", { name: "Download coming soon" }),
     ).toBeDisabled();
   });

@@ -23,49 +23,92 @@ function ProductPreview() {
         <span>Live</span>
       </div>
 
-      <div className="preview-summary">
-        <small>Current projected outcome</small>
-        <strong>Pit now</strong>
-        <span>Projected P7 with immediate traffic</span>
+      <div className="preview-outcome">
+        <section
+          className="preview-services"
+          aria-label="Selected pit services"
+        >
+          <dl>
+            <div>
+              <dt>Fuel selected</dt>
+              <dd>39.0 L</dd>
+            </div>
+            <div>
+              <dt>Tyres</dt>
+              <dd>4</dd>
+            </div>
+            <div>
+              <dt>Tear-off</dt>
+              <dd>On</dd>
+            </div>
+            <div>
+              <dt>Fast repair</dt>
+              <dd>Off</dd>
+            </div>
+            <div>
+              <dt>Estimated outlap loss</dt>
+              <dd>2.8 s</dd>
+            </div>
+            <div>
+              <dt>Pit-exit recovery</dt>
+              <dd>1.1 s</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section className="preview-panel">
+          <div className="preview-panel-heading">
+            <small>Projected pit outcome</small>
+            <span>Medium traffic</span>
+          </div>
+
+          <dl className="preview-metrics">
+            <div>
+              <dt>Projected rejoin</dt>
+              <dd>P7</dd>
+            </div>
+            <div>
+              <dt>Total pit loss</dt>
+              <dd>38.4 s</dd>
+            </div>
+            <div>
+              <dt>Service</dt>
+              <dd>13.5 s</dd>
+            </div>
+          </dl>
+
+          <div className="preview-driver">
+            <span>Ahead</span>
+            <strong>#21 Rodriguez</strong>
+            <span>−4.1 s</span>
+            <span className="pace-gain">−0.3 s/lap</span>
+          </div>
+          <div className="preview-driver">
+            <span>Behind</span>
+            <strong>#19 Dubreucq</strong>
+            <span>+2.3 s</span>
+            <span className="pace-loss">+0.4 s/lap</span>
+          </div>
+
+          <div className="preview-confidence">
+            <strong>Medium confidence</strong>
+            <span>Based on calibrated local observations</span>
+          </div>
+        </section>
       </div>
 
-      <div className="preview-panel">
-        <div className="preview-panel-heading">
-          <div>
-            <small>Scenario</small>
-            <strong>Pit now</strong>
-          </div>
-          <span>Medium traffic</span>
+      <aside
+        className="preview-uncertainty"
+        aria-label="Uncertain outcome example"
+      >
+        <div>
+          <strong>Mandatory repair time unknown</strong>
+          <span>
+            Provisional values are clearly marked and never presented as final.
+          </span>
         </div>
-
-        <dl className="preview-metrics">
-          <div>
-            <dt>Projected rejoin</dt>
-            <dd>P7</dd>
-          </div>
-          <div>
-            <dt>Total pit loss</dt>
-            <dd>30.0 s</dd>
-          </div>
-          <div>
-            <dt>Service</dt>
-            <dd>4.9 s</dd>
-          </div>
-        </dl>
-
-        <div className="preview-driver">
-          <span>Ahead</span>
-          <strong>#21 Rodriguez</strong>
-          <span>−8.2 s</span>
-          <span>−0.3 s/lap</span>
-        </div>
-        <div className="preview-driver">
-          <span>Behind</span>
-          <strong>#19 Dubreucq</strong>
-          <span>+3.0 s</span>
-          <span>+0.4 s/lap</span>
-        </div>
-      </div>
+        <span>Low confidence</span>
+      </aside>
 
       <figcaption>Product preview · footage coming soon</figcaption>
     </figure>
@@ -195,8 +238,12 @@ function App() {
                 <ul>
                   <li>Immediate traffic risk</li>
                   <li>Clear confidence level</li>
-                  <li>Warnings when inputs are missing</li>
+                  <li>Uncertain outcomes are visibly marked</li>
                 </ul>
+                <div className="capability-status">
+                  <strong>Prediction unavailable</strong>
+                  <span>Required data is missing</span>
+                </div>
               </article>
             </div>
 
